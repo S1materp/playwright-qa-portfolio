@@ -1,0 +1,1 @@
+{"name":"uchi-playwright-qa","version":"1.0.0","private":true,"scripts":{"start":"node server.js","test":"playwright test","test:ui":"playwright test --ui","test:headed":"playwright test --headed","report":"playwright show-report"},"devDependencies":{"@playwright/test":"^1.55.0"}}
