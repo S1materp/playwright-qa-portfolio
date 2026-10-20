@@ -48,7 +48,7 @@ test.describe('REST API — feedback validation', () => {
   test('TC-API-07 rejects malformed JSON', async ({ request }) => {
     const response = await request.post('/api/feedback', {
       headers: { 'content-type': 'application/json' },
-      data: '{invalid json',
+      data: Buffer.from('{invalid json', 'utf8'),
     });
     expect(response.status()).toBe(400);
     expect(await response.json()).toEqual({ error: 'Invalid JSON' });
